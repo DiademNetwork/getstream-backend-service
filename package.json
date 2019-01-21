@@ -1,0 +1,49 @@
+{
+  "name": "getstream-backend-service",
+  "version": "1.0.0",
+  "description": "Getstream service for Diadem network",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "repository": "https://github.com/DiademNetwork/getstream-backend-service",
+  "author": "Clement Bresson <clement0breson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "getstream": "4.1.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.2",
+    "morgan": "^1.8.0",
+    "resource-router-middleware": "^0.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.1.1",
+    "nodemon": "^1.9.2"
+  }
+}

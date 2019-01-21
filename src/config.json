@@ -1,0 +1,6 @@
+{
+	"mongodbURL": "mongodb://localhost/diadem-network",
+	"port": 8080,
+	"bodyLimit": "100kb",
+	"corsHeaders": ["Link"]
+}
